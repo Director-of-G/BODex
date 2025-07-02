@@ -1,0 +1,127 @@
+##
+## Copyright (c) 2023 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+##
+## NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
+## property and proprietary rights in and to this material, related
+## documentation and any modifications thereto. Any use, reproduction,
+## disclosure or distribution of this material and related documentation
+## without an express license agreement from NVIDIA CORPORATION or
+## its affiliates is strictly prohibited.
+##
+
+robot_cfg:
+  kinematics:
+    # TODO: usb related items
+    usd_path: "FILL_THIS"
+    usd_robot_root: "/robot"
+    isaac_usd_path: ""
+    usd_flip_joints: {}
+    usd_flip_joint_limits: []
+
+    urdf_path: "robot/lz_gripper_description/urdf/right_with_tip_link.urdf"
+    asset_root_path: "robot/lz_gripper_description"
+    
+    base_link: "base_link"
+    ee_link: "base_link"
+    use_root_pose: True   # if True, the first 7 elements of the hand pose are wrist (global) pos+quat
+    hand_pose_transfer_path: "hand_pose_transfer/lz_gripper.yml" # TODO
+    link_names: ['thumb_tip', 'index_tip', 'middle_tip', 'ring_tip', 'little_tip']  # fingertip link names
+    lock_joints: null
+    extra_links: null
+
+    tendon_joints: [['index_joint1', 'index_joint2'], ['middle_joint1', 'middle_joint2'], ['ring_joint1', 'ring_joint2'], ['little_joint1', 'little_joint2'], ['thumb_joint2', 'thumb_joint3']] # TODO
+    collision_link_names: [
+      "base_link",  # palm
+      "thumb_link1",
+      "thumb_link2",
+      "thumb_link3",
+      "thumb_tip",
+      "index_link1",
+      "index_link2",
+      "index_tip",
+      "middle_link1",
+      "middle_link2",
+      "middle_tip",
+      "ring_link1",
+      "ring_link2",
+      "ring_tip",
+      "little_link1",
+      "little_link2",
+      "little_tip",
+    ] # List[str]
+    collision_spheres: "spheres/lz_gripper.yml"
+    collision_sphere_buffer: 0.0 # float or Dict[str, float]
+    extra_collision_spheres: {}
+    self_collision_ignore: {
+      'base_link': ['thumb_link1', 'index_link1', 'middle_link1', 'ring_link1', 'little_link1'],
+      'thumb_link1': ['thumb_link2'],
+      'thumb_link2': ['thumb_link3'],
+      'thumb_link3': ['thumb_tip'],
+      'thumb_tip': [],
+      'index_link1': ['index_link2'],
+      'index_link2': ['index_tip'],
+      'index_tip': [],
+      'middle_link1': ['middle_link2'],
+      'middle_link2': ['middle_tip'],
+      'middle_tip': [],
+      'ring_link1': ['ring_link2'],
+      'ring_link2': ['ring_tip'],
+      'ring_tip': [],
+      'little_link1': ['little_link2'],
+      'little_link2': ['little_tip'],
+      'little_tip': []
+    } # Dict[str, List[str]]
+    self_collision_buffer: {
+      'base_link': 0.0,
+      'thumb_link1': 0.0,
+      'thumb_link2': 0.0,
+      'thumb_link3': 0.0,
+      'thumb_tip': 0.001,
+      'index_link1': 0.0,
+      'index_link2': 0.0,
+      'index_tip': 0.001,
+      'middle_link1': 0.0,
+      'middle_link2': 0.0,
+      'middle_tip': 0.001,
+      'ring_link1': 0.0,
+      'ring_link2': 0.0,
+      'ring_tip': 0.001,
+      'little_link1': 0.0,
+      'little_link2': 0.0,
+      'little_tip': 0.001
+    } # Dict[str, float]
+
+    use_global_cumul: True
+    mesh_link_names: [
+      "base_link",  # palm
+      "thumb_link1",
+      "thumb_link2",
+      "thumb_link3",
+      "thumb_tip",
+      "index_link1",
+      "index_link2",
+      "index_tip",
+      "middle_link1",
+      "middle_link2",
+      "middle_tip",
+      "ring_link1",
+      "ring_link2",
+      "ring_tip",
+      "little_link1",
+      "little_link2",
+      "little_tip",
+    ] # List[str]
+
+    cspace:
+      joint_names: [
+        "thumb_joint1", "thumb_joint2", "thumb_joint3",
+        "index_joint1", "index_joint2",
+        "middle_joint1", "middle_joint2",
+        "ring_joint1", "ring_joint2",
+        "little_joint1", "little_joint2",
+      ] # List[str]
+      retract_config: [0,0,0, 0,0, 0,0, 0,0, 0,0] # List[float]
+      null_space_weight: [1,1,1, 1,1, 1,1, 1,1, 1,1] # List[str]
+      cspace_distance_weight: [1,1,1, 1,1, 1,1, 1,1, 1,1] # List[str]
+      max_jerk: 500.0
+      max_acceleration: 15.0

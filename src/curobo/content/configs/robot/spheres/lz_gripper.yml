@@ -1,0 +1,152 @@
+
+collision_spheres:
+  base_link:
+    # back, left
+    - "center": [-0.035, 0.005, -0.095]
+      "radius": 0.022
+    - "center": [-0.035, 0.005, -0.065]
+      "radius": 0.022
+    - "center": [-0.035, 0.005, -0.035]
+      "radius": 0.022
+    # back, right
+    - "center": [0.005, 0.005, -0.095]
+      "radius": 0.022
+    - "center": [0.005, 0.005, -0.065]
+      "radius": 0.022
+    - "center": [0.005, 0.005, -0.035]
+      "radius": 0.022
+    # front bottom
+    - "center": [-0.045, -0.023, -0.105]
+      "radius": 0.012
+    - "center": [-0.045, -0.023, -0.09]
+      "radius": 0.012
+    - "center": [-0.025, -0.023, -0.105]
+      "radius": 0.012
+    - "center": [-0.025, -0.023, -0.09]
+      "radius": 0.012
+    - "center": [-0.005, -0.023, -0.105]
+      "radius": 0.012
+    - "center": [-0.005, -0.023, -0.09]
+      "radius": 0.012
+    - "center": [0.015, -0.023, -0.105]
+      "radius": 0.012
+    - "center": [0.015, -0.023, -0.09]
+      "radius": 0.012
+    - "center": [0.025, -0.025, -0.105]
+      "radius": 0.009
+    - "center": [0.028, -0.025, -0.09]
+      "radius": 0.009
+    # front middle
+    - "center": [-0.048, -0.021, -0.07]
+      "radius": 0.009
+    - "center": [-0.033, -0.021, -0.07]
+      "radius": 0.009
+    - "center": [-0.018, -0.021, -0.07]
+      "radius": 0.009
+    - "center": [-0.003, -0.021, -0.07]
+      "radius": 0.009
+    - "center": [-0.003, -0.021, -0.055]
+      "radius": 0.009
+    # front top
+    - "center": [0.025, -0.021, -0.04]
+      "radius": 0.009
+    - "center": [0.01, -0.021, -0.04]
+      "radius": 0.009
+    - "center": [-0.005, -0.021, -0.04]
+      "radius": 0.009
+  thumb_link1:
+    - "center": [-0.005, 0.0, 0.017]
+      "radius": 0.014
+  thumb_link2:
+    - "center": [-0.0125, 0.0035, -0.006]
+      "radius": 0.01
+    - "center": [-0.025, 0.009, -0.006]
+      "radius": 0.01
+    - "center": [-0.0375, 0.014, -0.006]
+      "radius": 0.01
+  thumb_link3:
+    - "center": [-0.009, 0.0, 0.008]
+      "radius": 0.009
+    - "center": [-0.022, 0.0, 0.008]
+      "radius": 0.008
+    - "center": [-0.035, 0.0, 0.008]
+      "radius": 0.007
+  thumb_tip:
+    - "center": [0.002, 0.0, 0.0]
+      "radius": 0.007
+  index_link1:
+    - "center": [0.0, 0.0, -0.009]
+      "radius": 0.01
+    - "center": [-0.0125, 0.0, -0.009]
+      "radius": 0.01
+    - "center": [-0.025, 0.0, -0.009]
+      "radius": 0.01
+    - "center": [-0.0375, 0.0, -0.009]
+      "radius": 0.01
+  index_link2:
+    - "center": [-0.009, 0.0, -0.008]
+      "radius": 0.009
+    - "center": [-0.022, 0.0, -0.008]
+      "radius": 0.007
+    - "center": [-0.035, 0.0, -0.008]
+      "radius": 0.007
+  index_tip:
+    - "center": [0.002, 0.0, 0.0]
+      "radius": 0.007
+  middle_link1:
+    - "center": [0.0, 0.0, -0.009]
+      "radius": 0.01
+    - "center": [-0.0125, 0.0, -0.009]
+      "radius": 0.01
+    - "center": [-0.025, 0.0, -0.009]
+      "radius": 0.01
+    - "center": [-0.0375, 0.0, -0.009]
+      "radius": 0.01
+  middle_link2:
+    - "center": [0.0, 0.009, -0.008]
+      "radius": 0.009
+    - "center": [0.0, 0.022, -0.008]
+      "radius": 0.007
+    - "center": [0.0, 0.035, -0.008]
+      "radius": 0.007
+  middle_tip:
+    - "center": [0.002, 0.0, 0.0]
+      "radius": 0.007
+  ring_link1:
+    - "center": [0.0, 0.0, -0.009]
+      "radius": 0.01
+    - "center": [-0.0125, 0.0, -0.009]
+      "radius": 0.01
+    - "center": [-0.025, 0.0, -0.009]
+      "radius": 0.01
+    - "center": [-0.0375, 0.0, -0.009]
+      "radius": 0.01
+  ring_link2:
+    - "center": [-0.009, 0.0, -0.008]
+      "radius": 0.009
+    - "center": [-0.022, 0.0, -0.008]
+      "radius": 0.007
+    - "center": [-0.035, 0.0, -0.008]
+      "radius": 0.007
+  ring_tip:
+    - "center": [0.002, 0.0, 0.0]
+      "radius": 0.007
+  little_link1:
+    - "center": [0.0, 0.0, -0.009]
+      "radius": 0.01
+    - "center": [-0.0125, 0.0, -0.009]
+      "radius": 0.01
+    - "center": [-0.025, 0.0, -0.009]
+      "radius": 0.01
+    - "center": [-0.0375, 0.0, -0.009]
+      "radius": 0.01
+  little_link2:
+    - "center": [-0.009, 0.0, -0.008]
+      "radius": 0.009
+    - "center": [-0.022, 0.0, -0.008]
+      "radius": 0.007
+    - "center": [-0.035, 0.0, -0.008]
+      "radius": 0.007
+  little_tip:
+    - "center": [0.002, 0.0, 0.0]
+      "radius": 0.007
