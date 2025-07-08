@@ -18,7 +18,7 @@ robot_cfg:
     usd_flip_joints: {}
     usd_flip_joint_limits: []
 
-    urdf_path: "robot/lz_gripper_description/urdf/right_with_tip_link.urdf"
+    urdf_path: "robot/lz_gripper_description/lz_gripper_body.urdf"
     asset_root_path: "robot/lz_gripper_description"
     
     base_link: "base_link"
@@ -29,7 +29,7 @@ robot_cfg:
     lock_joints: null
     extra_links: null
 
-    tendon_joints: [['index_joint1', 'index_joint2'], ['middle_joint1', 'middle_joint2'], ['ring_joint1', 'ring_joint2'], ['little_joint1', 'little_joint2'], ['thumb_joint2', 'thumb_joint3']] # TODO
+    tendon_joints: [['thumb_joint2', 'thumb_joint3'],['index_joint1', 'index_joint2'], ['middle_joint1', 'middle_joint2'], ['ring_joint1', 'ring_joint2'], ['little_joint1', 'little_joint2']] # TODO
     collision_link_names: [
       "base_link",  # palm
       "thumb_link1",

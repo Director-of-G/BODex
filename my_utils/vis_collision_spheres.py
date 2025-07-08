@@ -9,11 +9,11 @@ if __name__ == '__main__':
     # ------------- create visualizer -------------
     
     # lz_gripper
-    # robot_urdf_path = 'src/curobo/content/assets/robot/lz_gripper_description/urdf/right_with_tip_link.urdf'
-    # mesh_dir_path = 'src/curobo/content/assets/robot/lz_gripper_description/'
-    # robot_config_path = 'src/curobo/content/configs/robot/lz_gripper.yml'
-    # hand_pose = torch.zeros((1, 3 + 4 + 11))
-    # hand_pose[:, 7:] = torch.tensor([1.0, -0.15, -0.15, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25]).reshape(1, -1)  # joint angles
+    robot_urdf_path = 'src/curobo/content/assets/robot/lz_gripper_description/lz_gripper_body.urdf'
+    mesh_dir_path = 'src/curobo/content/assets/robot/lz_gripper_description/'
+    robot_config_path = 'src/curobo/content/configs/robot/lz_gripper.yml'
+    hand_pose = torch.zeros((1, 3 + 4 + 11))
+    hand_pose[:, 7:] = torch.tensor([1.0, 0.0, 0.0, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25]).reshape(1, -1)  # joint angles
 
     # shadow
     # robot_urdf_path = 'src/curobo/content/assets/robot/shadow_hand/right_sim.urdf'
@@ -31,11 +31,11 @@ if __name__ == '__main__':
     # hand_pose[:, 7:] = torch.tensor([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]).reshape(1, -1)  # joint angles
 
     # allegro
-    robot_urdf_path = 'src/curobo/content/assets/robot/allegro_description/allegro_hand_description_right.urdf'
-    mesh_dir_path = 'src/curobo/content/assets/robot/allegro_description/'
-    robot_config_path = 'src/curobo/content/configs/robot/allegro.yml'
-    hand_pose = torch.zeros((1, 3 + 4 + 16))
-    hand_pose[:, 7:] = torch.tensor([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]).reshape(1, -1)  # joint angles
+    # robot_urdf_path = 'src/curobo/content/assets/robot/allegro_description/allegro_hand_description_right.urdf'
+    # mesh_dir_path = 'src/curobo/content/assets/robot/allegro_description/'
+    # robot_config_path = 'src/curobo/content/configs/robot/allegro.yml'
+    # hand_pose = torch.zeros((1, 3 + 4 + 16))
+    # hand_pose[:, 7:] = torch.tensor([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]).reshape(1, -1)  # joint angles
 
     visualize = Visualizer(robot_urdf_path=robot_urdf_path, mesh_dir_path=mesh_dir_path)
     

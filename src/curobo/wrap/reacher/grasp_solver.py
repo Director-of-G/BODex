@@ -610,6 +610,7 @@ class GraspSolver(GraspSolverConfig):
             self.solver.newton_optimizer.outer_iters = newton_iters
         self.solver.reset()
         self.solver._init_solver = True     # avoid run multiple times
+        
         result = self.solver.solve(goal_buffer, coord_position_seed)
         if newton_iters is not None:
             self.solver.newton_optimizer.outer_iters = self.og_newton_iters

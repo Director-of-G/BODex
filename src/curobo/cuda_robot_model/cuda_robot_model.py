@@ -465,10 +465,10 @@ class CudaRobotModel(CudaRobotModelConfig):
         batch_size = q.shape[0]
         self.update_batch_size(batch_size, force_update=q.requires_grad)
 
-        # average under-actuated joints 
+        # average under-actuated joints
         self._in_q.copy_(q)
         if self.tendon_joints is not None:
-            self._in_q[..., self.tendon_joints[0]] = self._in_q[..., self.tendon_joints[1]] = (q[..., self.tendon_joints[0]] + q[..., self.tendon_joints[1]]) / 2 
+            self._in_q[..., self.tendon_joints[0]] = self._in_q[..., self.tendon_joints[1]] = (q[..., self.tendon_joints[0]] + q[..., self.tendon_joints[1]]) / 2
 
         # do fused forward:
         link_pos_seq, link_quat_seq, link_spheres_tensor = self._cuda_forward(self._in_q)
